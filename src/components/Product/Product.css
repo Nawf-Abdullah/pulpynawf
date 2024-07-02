@@ -1,0 +1,87 @@
+.product{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 20px;
+}
+
+.product img{
+    transition: 450ms;
+}
+
+.product:hover img{
+    transform: rotate(30deg);
+}
+
+.product h3{
+    font-family: 'Rubik', sans-serif;
+    color: var(--company-purple-500);
+}
+
+.fake{
+    text-decoration: line-through;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.product p{
+    font-size: 1.5rem;
+    font-family: 'Carter One', cursive;
+    color: var(--brown-500);
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.lol{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.adding-enter{
+    opacity: 0;
+    transition: all 250ms ease;
+    transform: translate(20%,-80%);
+}
+
+.adding-enter-active{
+    opacity: 0;
+    transform: translate(20%,-80%);
+    transition: all 250ms ease;
+}
+
+.adding-enter-done{
+    animation: cartAdd 1s ease forwards;
+}
+
+@keyframes cartAdd {
+    0%{
+        opacity: 1;
+        transform: translate(0,0);
+    }    
+    100%{
+        opacity: 0.1;
+        transform: translate(80vw,-80vh);
+    }
+}
+
+.adding-exit {
+    transition: all 250ms ease;
+    transform: translate(20%,-80%);
+}
+
+.adding-exit-active{
+    transform: translate(80%,-80%);
+}
+
+@media only screen and (max-width:332px){
+    .product{
+        width: 80%;
+    }
+}

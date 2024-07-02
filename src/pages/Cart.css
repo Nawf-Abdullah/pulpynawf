@@ -1,0 +1,36 @@
+.cart{
+    margin: 0;
+    position: relative;
+    top: -20px;
+    padding: 20px;
+    padding-top: 100px;
+    background-image: -webkit-linear-gradient(105deg, pink 50%,var(--primary-yellow-500) 50%);
+}
+
+.cart h1{
+    font-family: 'Carter One', cursive;
+    font-size: 3.4rem;
+    color: var(--brown-500);
+}
+
+.cart .products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    right: 60px;
+}
+
+
+@media only screen and (max-width:746px){
+    .cart button{
+        padding: 5px;
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width:689px) {
+    .cart .products{
+        flex-direction: column;
+    }
+}

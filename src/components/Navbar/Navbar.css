@@ -1,0 +1,153 @@
+nav{
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 70px;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 250ms;
+}
+
+.logo{
+    color: var(--company-purple-500);
+    font-family: 'Carter One', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.please{
+    display: none;
+}
+
+.nav-list{
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+}
+
+.nav-list p{
+    margin: 20px;
+    padding: 20px;
+    font-family: 'Rubik', sans-serif;
+    color: var(--tertiary-blue-500);
+    cursor: pointer;
+}
+
+.nav-list p:hover{
+    border-bottom: 3px solid var(--tertiary-blue-500);
+}
+
+.menu-icon{
+    margin-left: auto;
+    margin-right: 20px;
+    display: none;
+}
+
+@media only screen and (max-width:816px){
+    .logo{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:780px){
+    nav{
+        width: 100vw;
+    }
+    .nav-list p{
+        font-size: .9rem;
+        margin: 10px;
+    }
+}
+
+
+@media only screen and (max-width:600px){
+    .logo{
+        font-size: 1.2rem;
+    }
+
+    .nav-list p{
+        font-size: .7rem;
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    nav{
+       justify-content: flex-start;
+       height: 100px;
+       padding: 0;
+    }
+
+    .nav-list{
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none
+    }
+
+
+    .hamburger{
+        display: inline-block;
+        color: var(--secondary-30);
+        margin-left: auto;
+        margin-right: 40px;
+        z-index: 2;
+    }
+
+    .nav-list.show{
+        position: absolute;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+        padding: 40px 20px;
+        background-color: var(--secondary-grey-500);
+    }
+
+    .nav-list.show p{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+
+    .nav-list.show p.active{
+        border-bottom: 2px solid var(--seconday-30);
+    }
+
+    .menu-primary-enter{
+        position: absolute;
+        transform: translateX(-110%);
+    }
+
+    .menu-primary-enter-active{
+        transform: translateX(0%);
+        transition: all 250ms ease;
+    }
+
+    .menu-primary-exit {
+        transform: translateX(0%);
+        transition: all 250ms ease;
+    }
+
+    .menu-primary-exit-active{
+        position: absolute;
+        transform: translateX(-110%);
+    }
+}
+
+
+@media only screen and (min-width:550px){
+    .please{
+        display: none;
+    }
+}

@@ -1,0 +1,118 @@
+
+
+.home{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-image: -webkit-linear-gradient(65deg, var(--primary-yellow-500) 50%, var(--secondary-grey-500) 50%);
+    z-index: 2;
+}
+
+.home img{
+    width: 60vw;
+    transition: 250ms;
+}
+
+.content{
+    flex: 1;
+    overflow: hidden;
+}
+
+
+h1.company-name{
+    font-family: 'Carter One', cursive;
+    color: var(--company-purple-500);
+    font-size: 6rem;
+    cursor: grab;
+}
+
+.tagline{
+    font-family: 'Alumni Sans Inline One', cursive;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.button-container{
+    display: flex;
+}
+
+.about{
+    padding: 20px;
+    position: relative;
+    top: -20px;
+    background-image: -webkit-linear-gradient(105deg, pink 50%,var(--primary-yellow-500) 50%);
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.about h2{
+    font-family: 'Blaka', cursive;
+    color: var(--brown-500);
+    font-size: 4rem;
+}
+
+.showcase{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* .mix{
+    position: relative;
+    top: -20px;
+    background-image: -webkit-linear-gradient(65deg,#5271FF 50%, pink 50%);
+} */
+/*Photo by Bruno Scramgnon: https://www.pexels.com/photo/clear-glass-jar-on-block-1337824/*/
+
+.theauthmodal-enter{
+    position: absolute;
+    transform: translateY(-110%);
+}
+
+.theauthmodal-enter-active{
+    transform: translateY(0%);
+    transition: all 250ms ease-in-out;
+}
+
+.theauthmodal-exit {
+    transform: translateY(0%);
+    transition: all 250ms ease-in-out;
+}
+
+.theauthmodal-exit-active{
+    position: absolute;
+    transform: translateY(-110%);
+}
+
+@media only screen and (max-width:706px){ 
+    h1.company-name{
+        font-size: 4rem;
+    }
+
+    .home{
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width:556px){
+    .showcase{
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width:468px){
+    .home{
+        flex-direction: column-reverse;
+    }
+
+    .home img{
+        width: 100%;
+    }
+
+    .about{
+        top: 0px;
+    }
+}

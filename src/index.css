@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Blaka&family=Carter+One&family=Rubik:wght@400;500&display=swap');
+
+:root{
+  --primary-yellow-500:#FFC549;
+  --secondary-grey-500:#E4E9FD; 
+  --tertiary-blue-500:rgb(7, 0, 86);
+  --company-purple-500:#A818CF;
+  --brown-500:rgb(161, 60, 60);
+  --blueberry-blue:#5271FF;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--blueberry-blue);
+}
+
+
